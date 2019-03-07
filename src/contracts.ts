@@ -3,7 +3,7 @@ import { getContractAddressesForNetworkOrThrow } from '@0x/contract-addresses';
 import { DummyERC721Token } from '@0x/contract-artifacts';
 
 import { NETWORK_CONFIGS } from './configs';
-import { GANACHE_NETWORK_ID, KOVAN_NETWORK_ID, RINKEBY_NETWORK_ID, ROPSTEN_NETWORK_ID } from './constants';
+import { GANACHE_NETWORK_ID, KOVAN_NETWORK_ID, RINKEBY_NETWORK_ID, ROPSTEN_NETWORK_ID, MAINNET_NETWORK_ID } from './constants';
 import { providerEngine } from './provider_engine';
 
 const ERC721_TOKENS_BY_NETWORK_ID: { [networkId: number]: string[] } = {
@@ -11,6 +11,7 @@ const ERC721_TOKENS_BY_NETWORK_ID: { [networkId: number]: string[] } = {
     [GANACHE_NETWORK_ID]: ['0x07f96aa816c1f244cbc6ef114bb2b023ba54a2eb'],
     [KOVAN_NETWORK_ID]: ['0x84580f1ea9d989c71c13492d5d157712f08795d8'],
     [ROPSTEN_NETWORK_ID]: [],
+    [MAINNET_NETWORK_ID]: [],
 };
 
 export const dummyERC721TokenContracts: DummyERC721TokenContract[] = [];
